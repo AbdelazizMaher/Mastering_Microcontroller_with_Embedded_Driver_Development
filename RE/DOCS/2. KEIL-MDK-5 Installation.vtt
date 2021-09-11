@@ -1,0 +1,322 @@
+WEBVTT
+
+0
+00:00.160 --> 00:07.250
+Hey, welcome back to the lecture. In this section you will concentrate on how we can a set up you know KEIL
+
+1
+00:07.260 --> 00:14.080
+based development environment for our micro-controller programming.
+
+2
+00:14.130 --> 00:17.870
+So, the bad thing about KEIL is it supports only Windows platform.
+
+3
+00:17.910 --> 00:27.270
+So, if you are using Mac or Linux then I would request you to skip this lecture or skip this entire
+
+4
+00:27.270 --> 00:28.100
+section on
+
+5
+00:28.120 --> 00:33.720
+KEIL. And you can jump to next section no problem.
+
+6
+00:34.920 --> 00:35.270
+All right.
+
+7
+00:35.280 --> 00:43.460
+So, now first step in setting up  KEIL based development environment for your micro-controller is downloading
+
+8
+00:43.790 --> 00:46.310
+a KEIL MDK software.
+
+9
+00:46.560 --> 00:53.160
+So, just type KEIL MDK in Google, just follow this link
+
+10
+00:53.270 --> 01:00.130
+MDK Version 5. Just open this and you'll be represented with this page.
+
+11
+01:00.140 --> 01:04.060
+All right. So, the MDK starts for micro-controller devlopment kit.
+
+12
+01:04.120 --> 01:10.450
+So, as KEIL says it is the most comprehensive software development solution for ARM based micro-controllers 
+
+13
+01:10.490 --> 01:17.480
+and it includes all the components that you need to create, build, and debug embedded applications.
+
+14
+01:17.480 --> 01:25.260
+So, if you look at this product components diagram here. It is a full package of various tools, middlewares
+
+15
+01:25.310 --> 01:35.160
+the device HAL libraries and the CMSIS drivers as well as 
+the CMSIS APIs.The  very important
+
+16
+01:35.160 --> 01:43.950
+thing we notice here is the IDE. So, it gives us the KEIL micro vision IDE, where we you know write our code,we
+
+17
+01:44.200 --> 01:45.690
+edit our code etc..
+
+18
+01:45.780 --> 01:46.080
+Right?
+
+19
+01:46.080 --> 01:54.300
+So, and then it gives a KIEL micro vision debugger by which we debug our code on a microcontroller.
+
+20
+01:54.720 --> 02:00.470
+And it also provides ARMs natives C/  C++ compiler remember. 
+
+21
+02:00.600 --> 02:03.080
+So, here we don't use the GCC compiler.
+
+22
+02:03.210 --> 02:10.800
+So, I think you can configure KEIL to use GCC based compiler. But by default ARM provides its own proprietary 
+
+23
+02:10.800 --> 02:11.910
+compiler.
+
+24
+02:12.160 --> 02:21.180
+All the CMSIS- core APIs, DSP APIs,RTOS APIs etc. So, don't use CMSIS- DSP or RTOS in this course.
+
+25
+02:21.510 --> 02:22.300
+So, but we need
+
+26
+02:22.300 --> 02:24.410
+CMSIS core APIs,
+
+27
+02:24.820 --> 02:32.820
+which are actually used to talk to your micro-controller to be specifically to the core aspects of
+
+28
+02:32.820 --> 02:34.360
+your processor.
+
+29
+02:35.570 --> 02:42.800
+This MDK supports various devices. So, devices in this case means various  microcontrollers produced by different
+
+30
+02:42.800 --> 02:46.300
+vendors like TI,NXP ,ST etc..
+
+31
+02:46.370 --> 02:52.630
+So, all those devices which are based on ARM based processor.It gives use the startup code,
+
+32
+02:52.640 --> 02:55.190
+it gives you the  Device HAL  libraries,
+
+33
+02:55.190 --> 02:57.460
+CMSIS Drivers etc..
+
+34
+02:57.590 --> 03:00.490
+And it also gives you lots of middlewares.
+
+35
+03:00.500 --> 03:07.030
+Let's say, you want to design an application in which you want to convert your microcontroller into USB
+
+36
+03:07.100 --> 03:12.110
+device or USB host etc. So, you need to USB stack. Isn't it?
+
+37
+03:12.110 --> 03:18.170
+So, you need not to hunt for USB  stack outside .MDK itself gives you a stack
+
+38
+03:18.170 --> 03:25.520
+a USB stack by which you can convert your you  know  micro-controller or a board into USB Device
+
+39
+03:25.610 --> 03:29.930
+or you can add USB host functionality like that.
+
+40
+03:29.940 --> 03:37.160
+So, suppose if you want to interface your micro-controller to Ethernet pie and if you want
+
+41
+03:37.160 --> 03:45.020
+to run an IP stack,then it gives you IPV4 networking stack, IPV6 networking stack,
+
+42
+03:45.050 --> 03:53.690
+you can even run a file system on your microcontroller. So, it gives you all those drivers in the middleware 
+
+43
+03:53.690 --> 03:55.450
+component.
+
+44
+03:55.710 --> 04:03.550
+So, it's a complete package of tools ,compilers, Device HALs, middlewares etc...
+
+45
+04:03.830 --> 04:10.090
+So, In this course you will majorly  using MDK micro-controller development kit for our course,
+
+46
+04:10.180 --> 04:19.100
+I'll be using KEIL MDK5  software and unfortunately as I said it doesn't support other platforms
+
+47
+04:19.190 --> 04:20.750
+than Windows.
+
+48
+04:20.930 --> 04:25.860
+And so that's why,  I have already explained how to use eclipse.
+
+49
+04:25.990 --> 04:33.830
+So ,if you are using Linux or Mac based systems, then you can parlally  used Eclipse based development setup
+
+50
+04:33.920 --> 04:36.070
+that I have explained previously.
+
+51
+04:36.380 --> 04:38.740
+So, I'll be using KEIL and
+
+52
+04:38.750 --> 04:43.300
+And if you are using Windows then you can definitely use KEIL  no problem.
+
+53
+04:43.580 --> 04:48.180
+But if you are using Mac or Linux then you can continue using Eclipse. 
+
+54
+04:48.260 --> 04:48.950
+All right.
+
+55
+04:48.950 --> 04:49.340
+Great.
+
+56
+04:49.340 --> 04:51.560
+So, now let's download this software.
+
+57
+04:51.710 --> 04:54.800
+So, it comes with a different Editions.
+
+58
+04:54.890 --> 05:02.830
+So, all these are actually paid  editions like Essential, plus and professional those are paid editions. But MDK- 
+
+59
+05:03.030 --> 05:05.770
+Lite is a code limited. 
+
+60
+05:06.470 --> 05:08.990
+But, it's a free version is so
+
+61
+05:09.230 --> 05:13.490
+but the restriction is  you should not exceed a code size.
+
+62
+05:13.490 --> 05:18.650
+That is your binary size should not exceed 32 kilobytes.
+
+63
+05:18.650 --> 05:19.150
+So.
+
+64
+05:19.220 --> 05:26.510
+So, during compilation if it detects that if your code exceeds 32 kilobytes, then it will
+
+65
+05:26.510 --> 05:34.490
+start throwing errors, saying it cannot compile. Because the code size should be limited to 32 kilo 
+
+66
+05:34.490 --> 05:35.030
+bytes.
+
+67
+05:35.090 --> 05:38.210
+So, but for most of our work.
+
+68
+05:38.210 --> 05:47.150
+I'm sure we don't exceed 32 kilo bytes. So, that's why we will  download KEIL MDK-Lite software.
+
+69
+05:47.150 --> 05:47.700
+Great.
+
+70
+05:47.710 --> 05:51.890
+So, now let's go and download this software.
+
+71
+05:51.950 --> 05:54.380
+Just click on download and install.
+
+72
+05:54.710 --> 06:04.280
+That will take you to this web page here and here you can click on download MDK-core, in order to download
+
+73
+06:05.330 --> 06:06.990
+the software.
+
+74
+06:07.110 --> 06:09.430
+And here you have to fill this form in order   
+
+75
+06:09.440 --> 06:14.590
+download this software.So, I'll just quickly fill this form. 
+
+76
+06:14.690 --> 06:18.850
+So, I just fill this form and then click on submit.
+
+77
+06:18.860 --> 06:19.700
+All right.
+
+78
+06:19.700 --> 06:28.730
+So, now what will do is,  Just click on this EXE file in order to download that software and we will  download
+
+79
+06:28.730 --> 06:34.300
+into our software and tool chain folder. Great!  download here.

@@ -1,7 +1,7 @@
 The name of GPIO Mode register is (GPIOx_MODER).
 
 There are four modes in the MCU:
-                        1) Input mode
+                        1) Input mode (Can be used as interrupt)
                         2) Output mode
                         3) Alternative functionality mode
                         4) Analoge mode

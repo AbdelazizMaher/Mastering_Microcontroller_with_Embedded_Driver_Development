@@ -1,1 +1,6 @@
+High impedance is also called HI-Z state.
 
+HI-Z state of an I/O pin is keeping pin floating by not connecting to either high or low voltage.
+
+After powering up the MCU, by default all the GPIO pins will be in input mode with HI-Z state or floating state.
+It can lead to current leakage which may lead to higher power consumption.

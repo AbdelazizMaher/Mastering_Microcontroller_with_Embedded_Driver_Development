@@ -1,1 +1,9 @@
+The output buffer is disabled
 
+The schmitt trigger input is activated
+
+The pull-up/pull-down resistors are activated depending on the value in the GPIOx_PUPDR register.
+
+The data presented on the I/O pin are sampled into the input data register every AHB1 clock cycle.
+
+A read access to the input data register provides the I/O state.

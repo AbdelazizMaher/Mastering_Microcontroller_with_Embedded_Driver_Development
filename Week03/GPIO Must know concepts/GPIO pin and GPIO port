@@ -1,1 +1,5 @@
+GPIO is abbreviation of General Purpose Input Output
+GPIOs can be used for issuing intterupts,reading digital signals,generating triggers for external components,
+waking up the processor and many more. 
+GPIO port is nothing but a collection of fixed numbers of I/O pins
 

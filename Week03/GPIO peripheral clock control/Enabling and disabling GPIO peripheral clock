@@ -1,1 +1,3 @@
+GPIO ports are connected to AHB1 bus.
 
+We need to access RCC_AHB1ENR register to activate the GPIO port we want.

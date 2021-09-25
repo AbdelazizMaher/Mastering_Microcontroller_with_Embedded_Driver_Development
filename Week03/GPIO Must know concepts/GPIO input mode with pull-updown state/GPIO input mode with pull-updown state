@@ -1,1 +1,5 @@
+Floating state is avoided by introducing an internal pull up/pull down resistors.
 
+There are configuration registers for eavry GPIIO port which enable you to handle internal pull up/pull down resistors.
+
+It is always safe to keep the unused GPIO pin in one of the states so that they are reluctant to voltage fluctuations which may lead to current leakage.

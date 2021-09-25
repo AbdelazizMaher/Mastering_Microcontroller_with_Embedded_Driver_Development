@@ -1,3 +1,5 @@
-There are 9 ports on the board.
+There are 9 ports on STM32F407VG, there are a total of 144 pins.
+
+ON the Discovery development board only 80 pins are available (first 5 ports)
 
 AHB1 bus operates at max 168MHz of clock speed and all the GPIO ports are connected to it.

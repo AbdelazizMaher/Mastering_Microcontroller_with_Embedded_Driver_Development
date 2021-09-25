@@ -1,0 +1,5 @@
+GPIO output data register (GPIOx_ODR)
+
+It is used to control the output state of the I/O pins.
+
+you can either write on it or read on from it.

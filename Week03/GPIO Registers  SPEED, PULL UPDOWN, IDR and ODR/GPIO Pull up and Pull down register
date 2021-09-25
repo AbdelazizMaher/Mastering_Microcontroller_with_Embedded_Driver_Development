@@ -1,0 +1,7 @@
+GPIO Pull up and Pull down register (GPIOx_PUPDR)
+
+The entire register is divided into 16 groups, each group for each pin where:
+                                  1)  00 no pull up/down
+                                  2)  01 pull up
+                                  3)  10 pull down
+                                  4)  11 reserved

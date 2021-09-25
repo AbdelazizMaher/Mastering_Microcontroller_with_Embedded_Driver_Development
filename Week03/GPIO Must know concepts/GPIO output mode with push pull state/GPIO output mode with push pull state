@@ -1,1 +1,10 @@
+This is the default configuration when the pin is made output.
+
+In the push/pull configuration you don't need an internal or external pull up or pulldown  resistor.
+
+It actually uses two transistors, each will be ON to drive the output to the appropiate level .
+
+The top transistor (Pmos) will be ON when the output has to be HIGH.
+
+The BOTTOM transistor (Nmos) will be ON when the output has to be LOW.
 

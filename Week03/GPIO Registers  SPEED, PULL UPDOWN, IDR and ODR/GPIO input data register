@@ -1,0 +1,5 @@
+GPIO input data register (GPIOx_IDR)
+
+It is used to read the I/O state.
+
+GPIO has 16 pins , so you can use the first 16 bit of the register and the rest are reserved

@@ -1,1 +1,14 @@
+Alternative functionality mode:
+-when a GPIO is in alternative functionality mode it can be used for 16 different functionalites
 
+A table that contains all the supported alternative functionality for each GPIO pin:
+1-Go to the datasheet
+2-pinout and pin description
+3-Alternate function mapping
+
+There are two registers in order to configure the alternative function needed for any application:
+1-GPIO Alternative function high register (GPIOx AFRH)(x=A.I/J)
+2-GPIO Alternative function low register (GPIOx AFRl)(x=A.I/J/K)
+
+each register is divided to 8 groups a total of 16 groups
+each group is divided into 4 bits

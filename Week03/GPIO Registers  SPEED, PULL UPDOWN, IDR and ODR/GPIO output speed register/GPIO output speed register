@@ -1,1 +1,6 @@
+GPIO output speed register (GPIOx_OSPEEDR).
+
+It can only be used in output mode.
+
+By using speeed register you can configure " How quick the GPIO transition from H to L and from L to H ".
 

@@ -1,1 +1,14 @@
+Output mode with open drain configuration is nothing but the top pmos transistor simply not present.
+
+When the transistor is switched ON, the output will be pulled to LOW.
+
+When the transistor is switched OFF, the drain will be open, hence the output will be floating.
+
+So open drain configuration can only pull down the pin, it can't pull up the pin.
+
+It provides 2 states:
+                   1) GND state
+                   2)Floating state
+
+The open drain output configuration of  a GPIO is useless until you provide the pull up capability.
 

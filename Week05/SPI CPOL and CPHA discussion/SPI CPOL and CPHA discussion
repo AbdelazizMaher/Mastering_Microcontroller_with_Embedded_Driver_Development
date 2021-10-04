@@ -14,3 +14,7 @@ CPOL: 1) It controls the idle state value of the clock when no data is being tra
       
 CPHA: 1)It controls at which clock edge of the SCLK (1st or 2nd) the data should be sampled by the slave.
       2) The combination between CPOL and CPHA bits selects the data capture clock edge. 
+      
+If CPHA ==1 ----> Data will be sampled on the trailing-edge of the clock.      
+
+If CPHA ==0 ----> Data will be sampled on the leading-edge of the clock.

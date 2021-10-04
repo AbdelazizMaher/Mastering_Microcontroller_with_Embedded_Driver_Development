@@ -1,1 +1,14 @@
+SPI : Serial Peripheral Interface.
 
+The SPI bus allows the communication between one master device and one or more slave devices.
+
+# Four I/O pins are dedicated to SPI communication with external devices.
+
+           1) MISO: Master In/Slave Out data.In the general case, this pin is used to transmit data in slave mode and recieve data in master mode.
+           2) MOSI: Master Out/Slave In data.In the general case, this pin is used to transmit data in master mode and recieve data in slave mode .
+           3) SCLK: Serial Clock output pin for SPI master and input pin for slave devices.
+           4) NSS: Slave select pin.Depending on the SPI and NSS settings, this pin can be used to select an individual slave device for communication.
+           
+Slave's data communication lines(MISO,MOSI) will be in HI-Z state or High Impedance state until SS line (slave select) is pulled to ground.
+
+Whenever a SPI master sends one byte it also recieves one byte.

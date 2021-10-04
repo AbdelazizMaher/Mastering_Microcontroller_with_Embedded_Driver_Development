@@ -1,1 +1,16 @@
+SPI communication format:
+    1) SCLK PHASE (CPHA)
+    2) SCLK POLARITY (CPOL)
+    2) DATA FRAME FORMATE
+    
+During SPI communication, recieve and transmit operations are performed simultaneously .
 
+The serial clock(SCLK) synchronizes the shifting and sampling of the information on the data lines.
+
+The communication format depends on the clock phase,the clock polarity, and the data frame format.
+
+CPOL: 1) It controls the idle state value of the clock when no data is being transfered.
+      2) If it is reset, the SCLK pin has a low-level idle state. if it is set, the SCLK pin has a high-level idle state.
+      
+CPHA: 1)It controls at which clock edge of the SCLK (1st or 2nd) the data should be sampled by the slave.
+      2) The combination between CPOL and CPHA bits selects the data capture clock edge. 

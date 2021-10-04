@@ -1,1 +1,10 @@
-
+When a device is slave:
+      In slave mode, the NSS works as a standard "Chip SELECT" input and lets the slave communicates with master.
+      
+When a device is master:
+      In master mode, the NSS can be either used as output or input.As an input it can prevent multi-master bus collision, and as an output it 
+      can drive a single slave.
+      
+There are 2 types of slave managment:
+      1) Hardware slave managment
+      2) Software slave managment

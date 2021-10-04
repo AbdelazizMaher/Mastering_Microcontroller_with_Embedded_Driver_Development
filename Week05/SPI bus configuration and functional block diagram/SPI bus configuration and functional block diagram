@@ -1,1 +1,18 @@
+The SPI allows the MCU to communicate using different configurations,depending on the device targeted and the application requirments:
+       1) Full Duplex communication
+       2) Half Duplex communication
+       3) Simplex communication 
+
+MISO and MOSI lines are connected to a shift register.
+
+The shift register can be 8-bit or 16-bit according to the MCU.
+
+The shift register is connected to 2 buffers that can be accessed through Address and Data bus(APB):
+          1) RX buffer: When the shift register recieves 1 complete data, then the data will be moved to it,and form it you can read the data.
+          2) TX buffer: When yoy write data it is wrote to the TX buffer,when it recieves 1 complete data(if the shift register is not busy), then the data will be moved 
+          to the shift register.
+
+The Clock pin is controlled by a Baud Rate Generator if the peripheral is master.
+
+
 

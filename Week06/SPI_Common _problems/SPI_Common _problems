@@ -1,1 +1,41 @@
+Even though you say all configurations are correct cross check these settings. Whenever you are using SPI in master mode :
+
+1- Master mode bit must be enabled in the configuration register. 
+2- Ensure that SPI peripheral enable bit is enabled in the control register.
+3- SPI peripheral clock must be enabled. By default clocks to almost all peripheral in the microcontroller will be disabled by default.
+
+Some of the common problems that occurred in the SPI protocol and how to resolve them:
+
+Case 1 --->> Master cannot able to produce clock and data:
+---------------------------------------------------------
+
+There could be 2 strong reasons for this problem:
+Reason_1) The GPIOs which you use for clock and MOSI functionality are not configured properly for SPI functionality.
+__Debug Tip__: Recheck the GPIO alternate function register to see, whether a particular GPIO pin is configured for alternate functionality or not.
+
+Reason_2) configuration overriding. Even though you have configured all the registers properly,when you are involved in a bigger project
+there may be chance that registers are overridden by some other code.
+__Debug Tip__: Dump out all the required register contents just before you begin the transmission.
+
+
+Case 2 --->> Master is sending data, but slave is not receiving any data:
+-------------------------------------------------------------------------
+
+Reason_1) Not pulling down the slave select pin to ground before sending data to the slave.If the slave select pin is not pulled down
+slave SPI pins will be in floating or Hi-Z state. So, they don't respond for any data communication.
+__Debug Tip__: Probe through the logic analyzer to confirm slave select line is really low during data communication.
+
+Reason_2) Non enabling the peripheral IRQ number in the NVIC.
+__Debug Tip__: Check the NVIC interrupt mask register.
+
+Case 3 --->> SPI interrupts are not getting triggered:
+-------------------------------------------------------------------------
+
+Reason_1) Not enabling the TXE or RXNE interrupt in the SPI configuration register.
+__Debug Tip__: Check the SPI configuration register to see TXEIE and RXNEIE bits are really set to enable the interrupt.
+
+
+
+
+
 

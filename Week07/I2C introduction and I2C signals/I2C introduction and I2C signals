@@ -1,1 +1,22 @@
+Inter-Integrated Circuit(I2C) Protocol.Pronounced as "I squared C" or "I two C".
+
+What is the I2C protocol?
+      - It is just a protocol to achieve serial data communication between integrated circuits which are very close to each other.(But more serious protocol 
+       than SPI because the companies have come forward to design a specification).
+       
+      - The I2C protocol details(how data should be sent, how data should be received, how hand shaking should happen between sender and  receiver, error handling)
+       are complex than SPI( in other words SPI is actually a very simple protocol compared to I2C).
+       
+differences between SPI and I2C protocol:
+       1- I2C is based on dedicated specification. The spec is designed by NXP.For SPI there is no dedicated spec.
+       2- Multi master capability. I2C potocol is multi master capable, whereas SPI has no guidelines to achieve multi master capability.
+       3- ACKing. I2C hardware automatically ACKs every byte received.SPI does not support any automatic ACKing.
+       4- I2C needs just 2 pins for the communication between master and slaves, whereas SPI may need  4 pins and even more than that if multiple slaves are involved.
+       5- Addressing.I2C master talks to slaves based on slave addresses,while in SPI a dedicated pin will be used to select the slave.
+       6- I2C is half duplex, but as SPI is full duplex.
+       7- SPI is actually very very fast compared to I2C.
+
+
+
+       
 

@@ -1,1 +1,20 @@
+Data transfer is always initiated by the master on the SDA line, master initiates the data transfer by first producing the start condition."this is called as start condition"
+
+ After the start condition the address phase follows. The address phase is of 8 bits.
+ 
+ In the address phase, first 7 bits are actually the address of the slave. And the remaining one bit is actually decides the read or write operation."RW bar or read/write"
+            - If this bit is 0, that indicates that master is going to write the data or master is going to transmit the data.
+            - And if this bit is 1, then it indicates that master is going to read the data from the slave.
+ 
+Every byte put on SDA line must be 8 bits long. You cannot put 7 bits,you cannot put 16 bits like that. You have to put 1 byte.
+
+Each byte must be followed by an acknowledge bit. Once the 8 bits are sent in the address phase slave is going to receive this and slave is going 
+to match its own address with a 7 bit slave address sent. If there is any match then slave is going to send this ACK. 
+This is a ACK which is sent by the slave.So, master receives the ACK here. So, once master receives the ACK so it is going to do write operation.
+
+When master decides to close the communication with the slave, then master generates the STOP condition. This is a STOP condition which is generated
+by the master to close the communication.
+
+Once the STOP condition is generated, master has no control over the bus and some other master can initiate the data transfer.
+
 

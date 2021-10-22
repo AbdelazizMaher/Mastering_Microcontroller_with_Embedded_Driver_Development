@@ -1,1 +1,8 @@
-
+In Standard Mode communication:
+              1- Data transfer rate can reach up to a maximum of 100 kilo bits per second.
+              2- Was the very first mode introduced when the first I2C specification was released.
+              3- Standard mode devices are not upward compatible and they cannot communicate with devices of fast mode or above.
+              
+In Fast Mode communication:
+              1- Fast mode devices can receive and transmit data up to 400 kilo bits per second 
+              2- Fast mode devices are downward compatible and can communicate with standard mode devices in a 0 to 100 Kbits/s I2C bus system.

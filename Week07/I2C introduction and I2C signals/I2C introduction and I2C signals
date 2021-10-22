@@ -16,6 +16,14 @@ differences between SPI and I2C protocol:
        6- I2C is half duplex, but as SPI is full duplex.
        7- SPI is actually very very fast compared to I2C.
 
+Both SDA and SCL are bidirectional lines connected to  positive supply voltage via pull-up resistors. When the bus is free,both the lines are held at high.
+
+The output stages of devices connected to the bus must have an open drain or open collector configuration. 
+
+The bus capacitance limits the number of interfaces connected to the bus.
+
+When the bus is idle, both SDA and SCL are pulled to Vdd.
+
 
 
        

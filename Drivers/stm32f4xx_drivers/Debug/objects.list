@@ -1,0 +1,7 @@
+"Drivers/src/stm32f407xx_GPIO_driver.o"
+"Drivers/src/stm32f407xx_I2C_driver.o"
+"Drivers/src/stm32f407xx_SPI_driver.o"
+"Drivers/src/stm32f407xx_USART_driver.o"
+"src/02_Led_BTN_Toggle.o"
+"startup/startup_stm32.o"
+"startup/sysmem.o"

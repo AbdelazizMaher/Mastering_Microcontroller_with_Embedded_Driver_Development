@@ -1,0 +1,6 @@
+17:57:55 **** Incremental Build of configuration Debug for project stm32f4xx_drivers ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+
+17:57:55 Build Finished (took 204ms)
+
